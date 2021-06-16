@@ -75,5 +75,7 @@ subprojects {
         testLogging {
             showStandardStreams = true
         }
+        outputs.upToDateWhen {false}
+        jvmArgs = ['-javaagent:/home/ec2-user/thundra-agent-bootstrap.jar']
     }
 }
