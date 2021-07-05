@@ -76,6 +76,6 @@ subprojects {
             showStandardStreams = true
         }
         outputs.upToDateWhen {false}
-        jvmArgs = ['-javaagent:/home/ec2-user/thundra-agent-bootstrap.jar']
+        jvmArgs = ["-javaagent:${System.properties['agentPath']}/thundra-agent-bootstrap.jar".toString()]
     }
 }
